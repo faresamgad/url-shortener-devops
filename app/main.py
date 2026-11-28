@@ -18,6 +18,7 @@ CACHE_TTL_SECONDS = 3600
 app = FastAPI(title="url-shortener")
 cache = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 
+#A minor change to check cache of dockefile
 
 def db():
     return psycopg.connect(DATABASE_URL, autocommit=True)
